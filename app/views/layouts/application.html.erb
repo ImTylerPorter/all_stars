@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="#">All-Stars</a>
+		   <ul class="nav navbar-nav">
+		   	   <li><%= link_to "Home", statuses_path %></li>
+		   </ul>
+	</div>	
+</nav>
+<div class="container">
 <%= yield %>
-
+</div>
 </body>
 </html>
