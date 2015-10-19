@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<a class="navbar-brand" href="#">All-Stars</a>
@@ -16,6 +18,8 @@
 	</div>	
 </nav>
 <div class="container">
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= yield %>
 </div>
 </body>
