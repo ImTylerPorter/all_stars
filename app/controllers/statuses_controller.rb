@@ -7,6 +7,7 @@ class StatusesController < ApplicationController
     @statuses = Status.all
   end
 
+
   # GET /statuses/1
   # GET /statuses/1.json
   def show
@@ -61,6 +62,8 @@ class StatusesController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_status
@@ -69,6 +72,6 @@ class StatusesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def status_params
-      params.require(:status).permit(:name, :content, :first_name, :last_name, :profile_name)
+      params.require(:status).permit(:name, :content, :first_name, :last_name, :profile_name, :user_id)
     end
 end
