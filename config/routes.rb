@@ -8,9 +8,12 @@ Rails.application.routes.draw do
 
   end 
 
-
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
+
+  resources :statuses, path: 'updates'
+
+
   root to: 'statuses#index'
 
 
