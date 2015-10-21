@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
   						   	with: /\A[a-zA-Z0-9_-]+\z/,
   						   	message: 'Must be formatted correctly'
   						   }
-
+  has_many :user_friendships
+  has_many :friends, through: :user_friendships
   has_many :statuses
   
   def full_name
