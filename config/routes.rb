@@ -13,10 +13,11 @@ Rails.application.routes.draw do
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
 
-  resources :statuses, path: 'updates'
-
 
   root to: 'statuses#index'
+  
+ resources :profiles
+ get '/:id' , to: 'profiles#show'
 
 
 end
